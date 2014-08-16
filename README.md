@@ -13,7 +13,7 @@ Then, you can schedule some code to run once both keys are produced:
 ```java
 bus.once(Keys.FACEBOOK_PROFILE, Keys.GAME, new Subscriber2<Profile, Game>() {
   @Override
-  public void onMessage(String value1, Game value2) {
+  public void onMessage(Profile profile, Game game) {
     // Handle values
   }
 });
